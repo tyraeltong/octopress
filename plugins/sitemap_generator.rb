@@ -71,6 +71,16 @@ module Jekyll
   end
 
   class Page
+    
+    # # Chained version of constructor, used to generate the location of the "summary" file.
+    # alias orig_init initialize
+    # def initialize(site, base, dir, name)
+    #   orig_init(site, base, dir, name)
+    #   # SUMMARY_FILE = "source/_posts/summary.md"
+    #   # Allow for a summary.md file that generates the article summary.
+    #   @summary = Summary.new(File.join(@base, @dir, SUMMARY_FILE), File.join(@base, site.dest, @dir, SUMMARY_HTML))
+    # end
+
     attr_accessor :name
 
     def full_path_to_source
@@ -81,6 +91,7 @@ module Jekyll
       location = "#{site.config['url']}#{@dir}#{url}"
       location.gsub(/index.html$/, "")
     end
+    
   end
 
   class Layout

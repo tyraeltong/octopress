@@ -12,6 +12,8 @@ group :development do
   gem 'rubypants'
   gem 'rb-fsevent'
   gem 'stringex'
+  gem 'weibo'
+  gem 'nokogiri'
 end
 
 gem 'sinatra', '1.2.6'
